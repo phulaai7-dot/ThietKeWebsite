@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý Sinh viên</title>
+    <style>
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>DANH SÁCH SINH VIÊN</h2>
+
+    <script type="text/javascript">
+        var n = prompt("Nhập số sinh viên");
+        n = parseInt(n);
+
+        if (!isNaN(n) && n > 0) {
+            document.write("<table>");
+            document.write("<tr>");
+            document.write("<th>STT</th>");
+            document.write("<th>Mã SV</th>");
+            document.write("<th>Họ tên</th>");
+            document.write("<th>Lớp</th>");
+            document.write("</tr>");
+
+            for (var i = 1; i <= n; i++) {
+                var masv = prompt("Nhập vào Mã số SV thứ " + i);
+                var hoten = prompt("Nhập Họ tên sinh viên thứ " + i);
+                var tenlop = prompt("Nhập Tên lớp sinh viên thứ " + i);
+
+                document.write("<tr>");
+                document.write("<td>" + i + "</td>");
+                document.write("<td>" + masv + "</td>");
+                document.write("<td>" + hoten + "</td>");
+                document.write("<td>" + tenlop + "</td>");
+                document.write("</tr>");
+            }
+
+            document.write("</table>");
+        } else {
+            document.write("<p style='text-align:center;'>Số lượng sinh viên không hợp lệ.</p>");
+        }
+    </script>
+
+</body>
+</html>

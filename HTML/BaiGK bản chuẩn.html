@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Kê khai thông tin sinh viên</title>
+    <style>
+        body {
+            width: 95%;
+            margin: 0 auto;
+            font-family: Arial;
+        }
+
+        .header {
+            background: #e9e5c6;
+            border-radius: 0 0 20px 20px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .logo {
+            height: 60px;
+            margin-right: 15px;
+        }
+
+        .wrapper {
+            flex: 1;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 25px;
+        }
+
+        .container {
+            display: flex;
+            background: #e9e5c6;
+            padding: 30px 20px;
+            margin-top: 10px;
+            border-radius: 10px;
+            gap: 20px;
+        }
+
+        .menu {
+            width: 180px;
+            flex-shrink: 0;
+        }
+
+        .menu a {
+            display: block;
+            color: #3b2dbf;
+            margin-bottom: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            outline: none;
+        }
+
+        .menu a:active, 
+        .menu a:focus {
+            color: purple !important;
+        }
+
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .form-container {
+            width: fit-content;
+        }
+
+        .form-group {
+            margin-bottom: 12px;
+        }
+
+        label {
+            display: inline-block;
+            width: 120px;
+        }
+
+        input[type=text], select {
+            width: 250px;
+            padding: 6px;
+            border: 1px solid #ccc;
+        }
+
+        textarea {
+            width: 400px;
+            height: 100px;
+            border: 1px solid #ccc;
+            margin-top: 5px;
+        }
+
+        .right-sidebar {
+            width: 220px;
+            flex-shrink: 0;
+        }
+
+        .right-sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .right-sidebar li a {
+            display: block;
+            padding: 10px 0;
+            color: #333;
+            font-size: 14px;
+            text-decoration: none;
+            outline: none;
+        }
+
+        .right-sidebar li a:active, 
+        .right-sidebar li a:focus {
+            color: purple !important;
+            font-weight: bold;
+        }
+
+        .submit {
+            background: green;
+            color: white;
+            padding: 7px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .reset {
+            background: blue;
+            color: white;
+            padding: 7px 20px;
+            border: none;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+
+        .footer {
+            background: #39a6b2;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <img src="https://upload.wikimedia.org/wikipedia/vi/6/6b/Logo_trang_24h.png" class="logo">
+        <div class="wrapper">
+            <h1>TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP VIỆT TRÌ</h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="menu">
+            <a href="#">Đào tạo</a>
+            <a href="#">Nghiên cứu khoa học</a>
+            <a href="#">Giảng viên</a>
+            <a href="#">Sinh viên</a>
+        </div>
+
+        <div class="content">
+            <div class="form-container">
+                <h2 style="margin-top:0; text-align: center;">KÊ KHAI THÔNG TIN SINH VIÊN</h2>
+                <div class="form-group">
+                    <label>Họ tên:</label>
+                    <input type="text" placeholder="Họ tên">
+                </div>
+                <div class="form-group">
+                    <label>Địa chỉ:</label>
+                    <input type="text" placeholder="Địa chỉ">
+                </div>
+                <div class="form-group">
+                    <label>Mã sinh viên:</label>
+                    <input type="text" placeholder="Mã sinh viên">
+                </div>
+                <div class="form-group">
+                    <label>Giới tính:</label>
+                    <input type="radio" name="gt"> Nam 
+                    <input type="radio" name="gt"> Nữ
+                </div>
+                <div class="form-group">
+                    <label>Năm sinh:</label>
+                    <select>
+                        <option>2000</option>
+                        <option>2001</option>
+                        <option>2002</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Thông tin khác:</label><br>
+                    <textarea></textarea>
+                </div>
+                <div style="text-align: center; margin-top: 10px;">
+                    <button class="submit">Gửi</button>
+                    <button class="reset">Nhập lại</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-sidebar">
+            <h3 style="margin-top:0; font-size: 16px;">TIN TỨC</h3>
+            <ul>
+                <li><a href="#">Tin tức thị trường</a></li>
+                <li><a href="#">Tin tức trong ngày</a></li>
+                <li><a href="#">Thông tin chứng khoán</a></li>
+                <li><a href="#">Sức khỏe đời sống</a></li>
+                <li><a href="#">Công nghệ thông tin</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        Website tạo bởi Sinh viên - Lớp
+    </div>
+
+</body>
+</html>

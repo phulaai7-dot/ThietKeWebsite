@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Động</title>
+</head>
+<body>
+<script type="text/javascript">
+    let m = parseInt(prompt("Nhập số ô text (m):"));
+    let n = parseInt(prompt("Nhập số nhóm radio (n):"));
+    let p = parseInt(prompt("Nhập số tùy chọn dropdown (p):"));
+
+    document.write("<form>");
+    
+    document.write("<h3>Các ô nhập liệu:</h3>");
+    for(let i = 1; i <= m; i++) {
+        document.write("Ô " + i + ": <input type='text' name='text" + i + "'><br><br>");
+    }
+
+    document.write("<h3>Các nhóm Radio:</h3>");
+    for(let i = 1; i <= n; i++) {
+        document.write("Nhóm " + i + ": ");
+        document.write("<input type='radio' name='group" + i + "' value='1'> 1 ");
+        document.write("<input type='radio' name='group" + i + "' value='2'> 2<br>");
+    }
+
+    document.write("<h3>Danh sách chọn:</h3>");
+    document.write("<select name='dropdown'>");
+    for(let i = 1; i <= p; i++) {
+        document.write("<option value='" + i + "'>Text" + i + "</option>");
+    }
+    document.write("</select>");
+
+    document.write("</form>");
+</script>
+</body>
+</html>

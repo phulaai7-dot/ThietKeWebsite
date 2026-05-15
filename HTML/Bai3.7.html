@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Điều Kiện Đăng Nhập</title>
+    <style>
+        .form-box { width: 350px; background: #e9ecef; padding: 20px; margin: 20px auto; border: 1px solid #999; }
+        .row { margin-bottom: 10px; }
+        label { display: inline-block; width: 120px; }
+    </style>
+</head>
+<body onload="initForm()">
+
+    <div class="form-box">
+        <h3 style="text-align:center;">ĐĂNG KÝ</h3>
+        <div class="row">
+            <label>Tên đăng nhập:</label>
+            <input type="text" id="u37" onblur="validateUser()">
+        </div>
+        <div class="row">
+            <label>Mật khẩu:</label>
+            <input type="password" id="p37">
+        </div>
+        <div style="text-align:center;">
+            <button id="btn37" onclick="validateFinal()">Nhập</button>
+        </div>
+    </div>
+
+    <script>
+        function initForm() {
+            document.getElementById("u37").focus();
+            document.getElementById("btn37").disabled = true;
+        }
+
+        function validateUser() {
+            var u = document.getElementById("u37").value;
+            if (u.trim() !== "") {
+                document.getElementById("btn37").disabled = false;
+            } else {
+                document.getElementById("btn37").disabled = true;
+            }
+        }
+
+        function validateFinal() {
+            var p = document.getElementById("p37").value;
+            
+            if (p.length < 6) {
+                alert("Lỗi: Mật khẩu phải có ít nhất 6 ký tự!");
+                document.getElementById("p37").focus();
+                document.getElementById("p37").select();
+            } else {
+                alert("Thông tin hợp lệ! Đang gửi dữ liệu...");
+            }
+        }
+    </script>
+
+</body>
+</html>

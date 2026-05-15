@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo Bảng Tự Động</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-family: Arial, sans-serif;
+        }
+        td {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: center;
+            min-width: 40px;
+        }
+    </style>
+</head>
+<body>
+
+<script type="text/javascript">
+    var m = prompt("Nhập vào số dòng");
+    var n = prompt("Nhập vào số cột");
+
+    document.write("<table>");
+    for (var i = 1; i <= m; i++) {
+        document.write("<tr>");
+        for (var j = 1; j <= n; j++) {
+            document.write("<td>" + i + j + "</td>");
+        }
+        document.write("</tr>");
+    }
+    document.write("</table>");
+</script>
+
+</body>
+</html>

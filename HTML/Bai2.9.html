@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tin tức 24h</title>
+    <style type="text/css">
+        * { box-sizing: border-box; }
+        body {
+            width: 80%;
+            margin: 0 auto;
+            font-family: Arial;
+            background-color: #fff;
+        }
+
+        /* Tiêu đề */
+        .top {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            position: relative;
+        }
+        .top img { position: absolute; left: 0; height: 80px; }
+        .top h1 { color: blue; font-size: 40px; }
+
+        .menu {
+            background-color: #2e5d87;
+            padding: 10px;
+        }
+        .menu ul { margin: 0; padding: 0; list-style: none; }
+        .menu ul li {
+            display: inline-block;
+            color: white;
+            font-weight: bold;
+            margin-right: 25px;
+            cursor: pointer;
+            padding: 5px 10px;
+        }
+        .menu ul li:active {
+            background-color: purple;
+            border-radius: 4px;
+        }
+
+        .container { display: flex; padding: 20px 0; }
+        
+        .left-content { width: 70%; }
+        .right-sidebar { width: 30%; padding-left: 50px; }
+
+        table { width: 100%; border-collapse: collapse; }
+        td { padding: 8px; vertical-align: top; }
+        input[type="text"], select, textarea {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+        }
+        .btn-submit { background: green; color: white; border: none; padding: 8px 15px; cursor: pointer; }
+        .btn-reset { background: blue; color: white; border: none; padding: 8px 15px; cursor: pointer; }
+
+        /* Danh sách bên phải (Menu dọc) */
+        .right-sidebar ul { list-style: none; padding: 0; }
+        .right-sidebar ul li {
+            padding: 10px 0;
+            font-weight: bold;
+            cursor: pointer;
+            color: #000;
+        }
+        .right-sidebar ul li:active {
+            color: purple;
+            text-decoration: underline;
+        }
+
+        .bottom {
+            background-color: #f0f0f0;
+            text-align: center;
+            padding: 20px;
+            color: blue;
+            border-top: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top">
+        <img src="https://upload.wikimedia.org/wikipedia/vi/6/6b/Logo_trang_24h.png" alt="logo">
+        <h1>TIN TỨC 24H</h1>
+    </div>
+
+    <div class="menu">
+        <ul>
+            <li>Chính trị</li>
+            <li>Xã hội</li>
+            <li>Sức khỏe</li>
+            <li>Giáo dục</li>
+            <li>Thể thao</li>
+            <li>Liên hệ</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <div class="left-content">
+            <table>
+                <tr>
+                    <td width="20%">Họ tên: *</td>
+                    <td><input type="text" placeholder="Họ tên"></td>
+                </tr>
+                <tr>
+                    <td>Địa chỉ:</td>
+                    <td><input type="text" placeholder="Địa chỉ"></td>
+                </tr>
+                <tr>
+                    <td>Số điện thoại: *</td>
+                    <td><input type="text" placeholder="Số điện thoại"></td>
+                </tr>
+                <tr>
+                    <td>Giới tính:</td>
+                    <td>
+                        <input type="radio" name="gt"> Nam 
+                        <input type="radio" name="gt"> Nữ
+                    </td>
+                </tr>
+                <tr>
+                    <td>Năm sinh:</td>
+                    <td>
+                        <select>
+                            <option>2003</option>
+                            <option>2004</option>
+                            <option>2005</option>
+                            <option>2006</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Nội dung liên hệ: *</td>
+                    <td><textarea rows="6"></textarea></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button class="btn-submit">Gửi thông tin góp ý</button>
+                        <button class="btn-reset">Nhập lại</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="right-sidebar">
+            <ul>
+                <li>Tin tức thị trường</li>
+                <li>Tin tức trong ngày</li>
+                <li>Thông tin chứng khoán</li>
+                <li>Sức khỏe đời sống</li>
+                <li>Công nghệ thông tin</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="bottom">
+        Cơ quan chủ quản: Công ty Cổ phần Quảng cáo Trực tuyến 24H <br>
+        <b>© 24h.com</b>
+    </div>
+
+</body>
+</html>

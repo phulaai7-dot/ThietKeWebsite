@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính Tuổi</title>
+    <style>
+        .container {
+            width: 300px;
+            background-color: #d3d3d3;
+            padding: 20px;
+            text-align: center;
+            margin: 50px auto;
+            font-family: Arial, sans-serif;
+        }
+        h2 {
+            margin-top: 0;
+        }
+        .result {
+            color: red;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Tính tuổi</h2>
+    
+    <label for="namsinh">Năm sinh:</label>
+    <input type="text" id="namsinh" placeholder="1993">
+    <button onclick="tinhTuoi()">Tính tuổi</button>
+
+    <div id="ketqua" class="result"></div>
+</div>
+
+<script type="text/javascript">
+    function tinhTuoi() {
+        var namHienTai = new Date().getFullYear();
+        
+        var namSinhInput = document.getElementById("namsinh").value;
+        var hienThi = document.getElementById("ketqua");
+
+        var namSinh = parseInt(namSinhInput);
+
+        if (namSinhInput.trim() === "") {
+            hienThi.innerHTML = "Vui lòng nhập năm sinh!";
+        } else if (isNaN(namSinh)) {
+            hienThi.innerHTML = "Năm sinh phải là số!";
+        } else if (namSinh > namHienTai || namSinh < 1900) {
+            hienThi.innerHTML = "Năm sinh không hợp lệ!";
+        } else {
+            var tuoi = namHienTai - namSinh;
+            hienThi.innerHTML = "Tuổi của bạn là: " + tuoi;
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Đăng Ký</title>
+    <style>
+        .form-container { background: #e9e9e9; width: 400px; padding: 20px; margin: 10px auto; }
+        table { border-collapse: collapse; width: 400px; margin: 20px auto; }
+        th, td { border: 1px solid black; padding: 8px; text-align: left; }
+        h3 { text-align: center; margin-top: 0; }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h3>THÔNG TIN ĐĂNG KÝ</h3>
+        Tên đăng nhập: <input type="text" id="userIn"><br><br>
+        Mật khẩu: <input type="password" id="passIn"><br><br>
+        <button onclick="hienThi()">Nhập</button>
+    </div>
+
+    <table id="resultTable" style="display:none;">
+        <tr>
+            <th colspan="2" style="text-align:center;">Thông tin đăng nhập</th>
+        </tr>
+        <tr>
+            <td>UserName</td>
+            <td id="resUser">YourName</td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td id="resPass">PassWord</td>
+        </tr>
+    </table>
+
+    <script type="text/javascript">
+        function hienThi() {
+            let u = document.getElementById("userIn").value;
+            let p = document.getElementById("passIn").value;
+
+            document.getElementById("resUser").innerText = u;
+            document.getElementById("resPass").innerText = p;
+
+            document.getElementById("resultTable").style.display = "table";
+        }
+    </script>
+
+</body>
+</html>
